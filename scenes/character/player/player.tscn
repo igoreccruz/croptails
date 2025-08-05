@@ -1,10 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://dnes4by171sct"]
+[gd_scene load_steps=10 format=3 uid="uid://dnes4by171sct"]
 
 [ext_resource type="Script" uid="uid://csgegvrgw4b3y" path="res://scenes/character/player/player.gd" id="1_apd2u"]
 [ext_resource type="SpriteFrames" uid="uid://38djgiogfmxa" path="res://scenes/character/player/player.tres" id="1_h6tdw"]
 [ext_resource type="Script" uid="uid://f1e8ka1jvsxm" path="res://scripts/states_machine/node_state_machine.gd" id="2_sfcyi"]
 [ext_resource type="Script" uid="uid://3pccp8t8x7qb" path="res://scenes/character/player/idle_state.gd" id="3_ucfoo"]
 [ext_resource type="Script" uid="uid://kfeqpbh3rtwq" path="res://scenes/character/player/walk_state.gd" id="4_ucfoo"]
+[ext_resource type="Script" uid="uid://cili1mptmy5fg" path="res://scenes/character/player/chopping_state.gd" id="6_puv7k"]
+[ext_resource type="Script" uid="uid://bvc01l7x8v5fc" path="res://scenes/character/player/tilling_state.gd" id="7_hixpj"]
+[ext_resource type="Script" uid="uid://co8c3eu28hbv3" path="res://scenes/character/player/watering_state.gd" id="8_v051h"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4ywt2"]
 radius = 8.06226
@@ -15,7 +18,7 @@ script = ExtResource("1_apd2u")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -8)
 sprite_frames = ExtResource("1_h6tdw")
-animation = &"idle_right"
+animation = &"watering_right"
 autoplay = "idle_front"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -33,5 +36,20 @@ animated_sprite_2d = NodePath("../../AnimatedSprite2D")
 
 [node name="Walk" type="Node" parent="StateMachine" node_paths=PackedStringArray("player", "animated_sprite_2d")]
 script = ExtResource("4_ucfoo")
+player = NodePath("../..")
+animated_sprite_2d = NodePath("../../AnimatedSprite2D")
+
+[node name="Chopping" type="Node" parent="StateMachine" node_paths=PackedStringArray("player", "animated_sprite_2d")]
+script = ExtResource("6_puv7k")
+player = NodePath("../..")
+animated_sprite_2d = NodePath("../../AnimatedSprite2D")
+
+[node name="Tilling" type="Node" parent="StateMachine" node_paths=PackedStringArray("player", "animated_sprite_2d")]
+script = ExtResource("7_hixpj")
+player = NodePath("../..")
+animated_sprite_2d = NodePath("../../AnimatedSprite2D")
+
+[node name="Watering" type="Node" parent="StateMachine" node_paths=PackedStringArray("player", "animated_sprite_2d")]
+script = ExtResource("8_v051h")
 player = NodePath("../..")
 animated_sprite_2d = NodePath("../../AnimatedSprite2D")
