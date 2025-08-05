@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=4 uid="uid://b7fwshgbqchds"]
+[gd_scene load_steps=4 format=4 uid="uid://b7fwshgbqchds"]
 
 [ext_resource type="TileSet" uid="uid://d0wfkcyvj58fp" path="res://tilesets/game_tile_set.tres" id="1_cpn8j"]
 [ext_resource type="PackedScene" uid="uid://dnes4by171sct" path="res://scenes/character/player/player.tscn" id="2_x5hbo"]
+[ext_resource type="PackedScene" uid="uid://d1iysbm228eg5" path="res://scenes/objects/trees/large_tree.tscn" id="3_6mhvp"]
 
 [node name="TestSceneTileMap" type="Node2D"]
 
@@ -24,3 +25,12 @@ position = Vector2(169, 257)
 current_tool = 1
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+
+[node name="LargeTree" parent="." instance=ExtResource("3_6mhvp")]
+position = Vector2(209, 129)
+
+[node name="LargeTree2" parent="." instance=ExtResource("3_6mhvp")]
+position = Vector2(301, 123)
+
+[node name="LargeTree3" parent="." instance=ExtResource("3_6mhvp")]
+position = Vector2(255, 124)
