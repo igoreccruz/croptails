@@ -10,7 +10,7 @@
 [ext_resource type="Script" uid="uid://co8c3eu28hbv3" path="res://scenes/character/player/watering_state.gd" id="8_v051h"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4ywt2"]
-radius = 8.06226
+radius = 4.0
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_apd2u")
@@ -22,7 +22,7 @@ animation = &"watering_right"
 autoplay = "idle_front"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -8)
+position = Vector2(0, -4)
 shape = SubResource("CircleShape2D_4ywt2")
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_node_state")]
