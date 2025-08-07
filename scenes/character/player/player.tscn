@@ -20,12 +20,11 @@ radius = 3.0
 y_sort_enabled = true
 collision_layer = 2
 script = ExtResource("1_apd2u")
-current_tool = 1
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -8)
 sprite_frames = ExtResource("1_h6tdw")
-animation = &"chopping_right"
+animation = &"idle_front"
 autoplay = "idle_front"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
