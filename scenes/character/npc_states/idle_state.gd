@@ -27,7 +27,7 @@ func _on_next_transitions() -> void:
 
 
 func _on_enter() -> void:
-	animated_sprite_2d.play("Idle")
+	animated_sprite_2d.play("idle")
 	
 	idle_state_timeout = false
 	idle_state_timer.start()

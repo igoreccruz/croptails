@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://cq1laiw36rdll" path="res://scenes/character/chicken/chicken.gd" id="1_3g6wc"]
 [ext_resource type="Texture2D" uid="uid://mynsky15fnma" path="res://assets/game/characters/chicken_sprites.png" id="1_u68c6"]
 [ext_resource type="Script" uid="uid://f1e8ka1jvsxm" path="res://scripts/states_machine/node_state_machine.gd" id="2_unhw4"]
-[ext_resource type="Script" uid="uid://bpue10nlndwak" path="res://scenes/character/chicken/idle_state.gd" id="3_3g6wc"]
-[ext_resource type="Script" uid="uid://if3dl0ufgtn6" path="res://scenes/character/chicken/walk_state.gd" id="4_unhw4"]
+[ext_resource type="Script" uid="uid://bpue10nlndwak" path="res://scenes/character/npc_states/idle_state.gd" id="3_3g6wc"]
+[ext_resource type="Script" uid="uid://if3dl0ufgtn6" path="res://scenes/character/npc_states/walk_state.gd" id="4_unhw4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o5awo"]
 atlas = ExtResource("1_u68c6")
@@ -40,7 +40,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_ffj5h")
 }],
 "loop": true,
-"name": &"Idle",
+"name": &"idle",
 "speed": 3.0
 }, {
 "frames": [{
@@ -57,7 +57,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_nl5aq")
 }],
 "loop": true,
-"name": &"Walk",
+"name": &"walk",
 "speed": 3.0
 }]
 
@@ -70,10 +70,8 @@ script = ExtResource("1_3g6wc")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -6)
 sprite_frames = SubResource("SpriteFrames_74q6m")
-animation = &"Walk"
-autoplay = "Idle"
-frame = 3
-frame_progress = 0.122948
+animation = &"idle"
+autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, -5)
