@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctd71l55blp4w"]
+
+[ext_resource type="Script" uid="uid://c1m5f36bvircv" path="res://scenes/components/growth_cycle_component.gd" id="1_8e5wo"]
+
+[node name="GrowthCycleComponent" type="Node"]
+script = ExtResource("1_8e5wo")
