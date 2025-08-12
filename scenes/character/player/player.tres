@@ -174,7 +174,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"chopping_back",
-"speed": 3.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -185,7 +185,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"chopping_front",
-"speed": 3.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -196,7 +196,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"chopping_left",
-"speed": 3.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -207,7 +207,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"chopping_right",
-"speed": 3.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -262,7 +262,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"tilling_back",
-"speed": 3.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -273,7 +273,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"tilling_front",
-"speed": 3.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -284,7 +284,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"tilling_left",
-"speed": 3.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -295,7 +295,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"tilling_right",
-"speed": 3.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -350,7 +350,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"watering_back",
-"speed": 3.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -361,7 +361,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"watering_front",
-"speed": 3.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -372,7 +372,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"watering_left",
-"speed": 3.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -383,5 +383,5 @@ animations = [{
 }],
 "loop": false,
 "name": &"watering_right",
-"speed": 3.0
+"speed": 55.0
 }]

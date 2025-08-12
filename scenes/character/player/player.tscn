@@ -16,7 +16,7 @@ radius = 4.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_68dt2"]
 radius = 3.0
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 y_sort_enabled = true
 collision_layer = 2
 script = ExtResource("1_apd2u")
@@ -24,7 +24,7 @@ script = ExtResource("1_apd2u")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -2)
 sprite_frames = ExtResource("1_h6tdw")
-animation = &"idle_front"
+animation = &"chopping_back"
 autoplay = "idle_front"
 offset = Vector2(0, -5)
 
