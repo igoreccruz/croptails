@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="CropTails"
+run/main_scene="uid://fhm38x7y30sb"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 

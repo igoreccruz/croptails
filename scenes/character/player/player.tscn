@@ -24,7 +24,7 @@ script = ExtResource("1_apd2u")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -2)
 sprite_frames = ExtResource("1_h6tdw")
-animation = &"chopping_back"
+animation = &"idle_front"
 autoplay = "idle_front"
 offset = Vector2(0, -5)
 
