@@ -1,0 +1,72 @@
+[gd_scene load_steps=7 format=3 uid="uid://c1cpy0u6f7h6q"]
+
+[ext_resource type="PackedScene" uid="uid://cuftrwmrcphga" path="res://scenes/ui/game_menu_screen_background.tscn" id="1_3ffun"]
+[ext_resource type="Theme" uid="uid://dbv4vxkxlt1ro" path="res://scenes/ui/game_ui_theme.tres" id="1_dkf86"]
+[ext_resource type="FontFile" uid="uid://t1m0o20wbjao" path="res://assets/ui/fonts/pixelFont-7-8x14-sproutLands.ttf" id="1_t26fm"]
+[ext_resource type="Script" uid="uid://vekmpcme0tg3" path="res://scenes/game_menu_screen.gd" id="1_w6diq"]
+[ext_resource type="PackedScene" uid="uid://cwp6pqellhe84" path="res://scenes/components/mouse_cursor_component.tscn" id="2_ajymb"]
+[ext_resource type="Texture2D" uid="uid://dvk5cxmo85y44" path="res://assets/ui/mouse_icon.png" id="3_bw4m6"]
+
+[node name="GameMenuScreen" type="CanvasLayer"]
+script = ExtResource("1_w6diq")
+
+[node name="MouseCursorComponent" parent="." instance=ExtResource("2_ajymb")]
+cursor_component_texture = ExtResource("3_bw4m6")
+
+[node name="GameMenuScreenBackground" parent="." instance=ExtResource("1_3ffun")]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+
+[node name="Label" type="Label" parent="MarginContainer/MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.458824, 0.298039, 0.376471, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("1_t26fm")
+theme_override_font_sizes/font_size = 54
+text = "CROP TAILS"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+
+[node name="StartGameButton" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 29)
+layout_mode = 2
+theme = ExtResource("1_dkf86")
+theme_type_variation = &"GameMenuButton"
+text = "START"
+
+[node name="SaveGameButton" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 29)
+layout_mode = 2
+theme = ExtResource("1_dkf86")
+theme_type_variation = &"GameMenuButton"
+text = "SAVE"
+
+[node name="ExitGameButton" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 29)
+layout_mode = 2
+theme = ExtResource("1_dkf86")
+theme_type_variation = &"GameMenuButton"
+text = "EXIT GAME"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/StartGameButton" to="." method="_on_start_game_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/SaveGameButton" to="." method="_on_save_game_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ExitGameButton" to="." method="_on_exit_game_button_pressed"]

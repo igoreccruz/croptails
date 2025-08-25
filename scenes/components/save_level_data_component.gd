@@ -26,6 +26,7 @@ func save_node_data() -> void:
 
 
 func save_game() -> void:
+	print("chamou")
 	if !DirAccess.dir_exists_absolute(save_game_data_path):
 		DirAccess.make_dir_absolute(save_game_data_path)
 	
